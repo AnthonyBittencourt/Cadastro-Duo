@@ -9,5 +9,27 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "sqlite"
+}
+
+model Personagens{
+  id Int @id @default(autoincrement())
+  nome String
+  primeiraAp String?
+  idade String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  desenho Desenho[]
+}
+
+model Desenho{
+  id Int @id @default(autoincrement())
+  nome String?
+  lançamento String
+  temporadas Int
+  status Boolean
+  genero String
+  CreateAt DateTime @default(now())
+  updateIn  DateTime @updatedAt
+  personagem Personagens []
 }
