@@ -33,3 +33,11 @@ model Desenho{
   updateIn  DateTime @updatedAt
   personagem Personagens []
 }
+
+model User{
+  id Int @id @default(autoincrement())
+  nome String
+  email String @unique
+  senha String
+  admin Boolean @default(false)
+}

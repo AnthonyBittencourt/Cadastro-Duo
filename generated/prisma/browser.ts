@@ -27,3 +27,8 @@ export type Personagens = Prisma.PersonagensModel
  * 
  */
 export type Desenho = Prisma.DesenhoModel
+/**
+ * Model User
+ * 
+ */
+export type User = Prisma.UserModel

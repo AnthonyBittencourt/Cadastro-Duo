@@ -10,4 +10,5 @@
  */
 export type * from './models/Personagens.ts'
 export type * from './models/Desenho.ts'
+export type * from './models/User.ts'
 export type * from './commonInputTypes.ts'
